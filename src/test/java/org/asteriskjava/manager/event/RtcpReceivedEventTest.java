@@ -48,7 +48,7 @@ public class RtcpReceivedEventTest
     @Test
     public void testRtt()
     {
-        rtcpReceivedEvent.setRtt("12345(sec)");
-        assertEquals(new Long(12345), rtcpReceivedEvent.getRtt());
+        rtcpReceivedEvent.setRtt("12345.123(sec)");
+        assertEquals(12345.123, rtcpReceivedEvent.getRtt(), 0.00001);
     }
 }

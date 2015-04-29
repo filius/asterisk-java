@@ -36,6 +36,7 @@ public class AgentCompleteEvent extends AbstractAgentEvent
     private Long holdTime;
     private Long talkTime;
     private String reason;
+    private String interfaceName;
 
     public AgentCompleteEvent(Object source)
     {
@@ -103,5 +104,13 @@ public class AgentCompleteEvent extends AbstractAgentEvent
     public void setReason(String reason)
     {
         this.reason = reason;
+    }
+
+    public String getInterfaceName() {
+        return interfaceName;
+    }
+
+    public void setInterfaceName(String interfaceName) {
+        this.interfaceName = interfaceName;
     }
 }
