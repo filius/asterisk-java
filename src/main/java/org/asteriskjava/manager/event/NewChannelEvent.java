@@ -31,8 +31,6 @@ public class NewChannelEvent extends AbstractChannelStateEvent
     static final long serialVersionUID = 1L;
 
     private String accountCode;
-    private String context;
-    private String exten;
 
     public NewChannelEvent(Object source)
     {
@@ -62,49 +60,4 @@ public class NewChannelEvent extends AbstractChannelStateEvent
         this.accountCode = accountCode;
     }
 
-    /**
-     * Returns the context of the dialplan entry the channel started at.<p>
-     * This property is available since Asterisk 1.6.
-     *
-     * @return the context of the dialplan entry the channel started at.
-     * @since 1.0.0
-     */
-    public String getContext()
-    {
-        return context;
-    }
-
-    /**
-     * Sets the context of the dialplan entry the channel started at.
-     *
-     * @param context the context of the dialplan entry the channel started at.
-     * @since 1.0.0
-     */
-    public void setContext(String context)
-    {
-        this.context = context;
-    }
-
-    /**
-     * Returns the extension of the dialplan entry the channel started at.<p>
-     * This property is available since Asterisk 1.6.
-     *
-     * @return the extension of the dialplan entry the channel started at.
-     * @since 1.0.0
-     */
-    public String getExten()
-    {
-        return exten;
-    }
-
-    /**
-     * Sets the extension of the dialplan entry the channel started at.
-     *
-     * @param exten the extension of the dialplan entry the channel started at.
-     * @since 1.0.0
-     */
-    public void setExten(String exten)
-    {
-        this.exten = exten;
-    }
 }

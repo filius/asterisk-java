@@ -48,6 +48,23 @@ public class AgentCalledEvent extends ManagerEvent
     private String uniqueId;
     private String connectedlinename;
     private String connectedlinenum;
+    private String destchannel;
+    private Integer destchannelstate;
+    private String destcontext;
+    private String destconnectedlinename;
+    private String channel;
+    private String interfaceName;
+    private String exten;
+    private String destexten;
+    private String destuniqueid;
+    private String channelstatedesc;
+    private Integer destpriority;
+    private String destcalleridname;
+    private Integer channelstate;
+    private String destconnectedlinenum;
+    private String destchannelstatedesc;
+    private String destcalleridnum;
+    private String membername;
 
     private Map<String, String> variables;
 
@@ -317,4 +334,139 @@ public class AgentCalledEvent extends ManagerEvent
         this.connectedlinenum = connectedlinenum;
     }
 
+    public String getDestchannel() {
+        return destchannel;
+    }
+
+    public void setDestchannel(String destchannel) {
+        this.destchannel = destchannel;
+    }
+
+    public Integer getDestchannelstate() {
+        return destchannelstate;
+    }
+
+    public void setDestchannelstate(Integer destchannelstate) {
+        this.destchannelstate = destchannelstate;
+    }
+
+    public String getDestcontext() {
+        return destcontext;
+    }
+
+    public void setDestcontext(String destcontext) {
+        this.destcontext = destcontext;
+    }
+
+    public String getDestconnectedlinename() {
+        return destconnectedlinename;
+    }
+
+    public void setDestconnectedlinename(String destconnectedlinename) {
+        this.destconnectedlinename = destconnectedlinename;
+    }
+
+    public String getChannel() {
+        return channel;
+    }
+
+    public void setChannel(String channel) {
+        this.channel = channel;
+    }
+
+    public String getInterfaceName() {
+        return interfaceName;
+    }
+
+    public void setInterfaceName(String interfaceName) {
+        this.interfaceName = interfaceName;
+    }
+
+    public String getExten() {
+        return exten;
+    }
+
+    public void setExten(String exten) {
+        this.exten = exten;
+    }
+
+    public String getDestexten() {
+        return destexten;
+    }
+
+    public void setDestexten(String destexten) {
+        this.destexten = destexten;
+    }
+
+    public String getDestuniqueid() {
+        return destuniqueid;
+    }
+
+    public void setDestuniqueid(String destuniqueid) {
+        this.destuniqueid = destuniqueid;
+    }
+
+    public String getChannelstatedesc() {
+        return channelstatedesc;
+    }
+
+    public void setChannelstatedesc(String channelstatedesc) {
+        this.channelstatedesc = channelstatedesc;
+    }
+
+    public Integer getDestpriority() {
+        return destpriority;
+    }
+
+    public void setDestpriority(Integer destpriority) {
+        this.destpriority = destpriority;
+    }
+
+    public String getDestcalleridname() {
+        return destcalleridname;
+    }
+
+    public void setDestcalleridname(String destcalleridname) {
+        this.destcalleridname = destcalleridname;
+    }
+
+    public Integer getChannelstate() {
+        return channelstate;
+    }
+
+    public void setChannelstate(Integer channelstate) {
+        this.channelstate = channelstate;
+    }
+
+    public String getDestconnectedlinenum() {
+        return destconnectedlinenum;
+    }
+
+    public void setDestconnectedlinenum(String destconnectedlinenum) {
+        this.destconnectedlinenum = destconnectedlinenum;
+    }
+
+    public String getDestchannelstatedesc() {
+        return destchannelstatedesc;
+    }
+
+    public void setDestchannelstatedesc(String destchannelstatedesc) {
+        this.destchannelstatedesc = destchannelstatedesc;
+    }
+
+    public String getDestcalleridnum() {
+        return destcalleridnum;
+    }
+
+    public void setDestcalleridnum(String destcalleridnum) {
+        this.destcalleridnum = destcalleridnum;
+    }
+
+    public String getMembername() {
+        return membername;
+    }
+
+    public void setMembername(String membername) {
+        this.membername = membername;
+    }
 }

@@ -33,6 +33,15 @@ public class VarSetEvent extends ManagerEvent
     private String uniqueId;
     private String variable;
     private String value;
+    private String callerIdNum;
+    private String callerIdName;
+    private String connectedLineName;
+    private Integer priority;
+    private Integer channelState;
+    private String exten;
+    private String context;
+    private String connectedLineNum;
+    private String channelStateDesc;
 
     public VarSetEvent(Object source)
     {
@@ -97,5 +106,77 @@ public class VarSetEvent extends ManagerEvent
     public void setValue(String value)
     {
         this.value = value;
+    }
+
+    public String getCallerIdNum() {
+        return callerIdNum;
+    }
+
+    public void setCallerIdNum(String callerIdNum) {
+        this.callerIdNum = callerIdNum;
+    }
+
+    public String getCallerIdName() {
+        return callerIdName;
+    }
+
+    public void setCallerIdName(String callerIdName) {
+        this.callerIdName = callerIdName;
+    }
+
+    public String getConnectedLineName() {
+        return connectedLineName;
+    }
+
+    public void setConnectedLineName(String connectedLineName) {
+        this.connectedLineName = connectedLineName;
+    }
+
+    public Integer getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Integer priority) {
+        this.priority = priority;
+    }
+
+    public Integer getChannelState() {
+        return channelState;
+    }
+
+    public void setChannelState(Integer channelState) {
+        this.channelState = channelState;
+    }
+
+    public String getExten() {
+        return exten;
+    }
+
+    public void setExten(String exten) {
+        this.exten = exten;
+    }
+
+    public String getContext() {
+        return context;
+    }
+
+    public void setContext(String context) {
+        this.context = context;
+    }
+
+    public String getConnectedLineNum() {
+        return connectedLineNum;
+    }
+
+    public void setConnectedLineNum(String connectedLineNum) {
+        this.connectedLineNum = connectedLineNum;
+    }
+
+    public String getChannelStateDesc() {
+        return channelStateDesc;
+    }
+
+    public void setChannelStateDesc(String channelStateDesc) {
+        this.channelStateDesc = channelStateDesc;
     }
 }

@@ -29,6 +29,13 @@ public class SoftHangupRequestEvent extends AbstractChannelEvent
 
     private Integer cause;
     private String uniqueid;
+    private String exten;
+    private String context;
+    private String connectedlinenum;
+    private String channelstatedesc;
+    private Integer channelstate;
+    private String connectedlinename;
+    private Integer priority;
 
     public SoftHangupRequestEvent(Object source)
     {
@@ -65,8 +72,59 @@ public class SoftHangupRequestEvent extends AbstractChannelEvent
         this.uniqueid = uniqueid;
     }
 
+    public String getExten() {
+        return exten;
+    }
 
+    public void setExten(String exten) {
+        this.exten = exten;
+    }
 
+    public String getContext() {
+        return context;
+    }
 
+    public void setContext(String context) {
+        this.context = context;
+    }
 
+    public String getConnectedlinenum() {
+        return connectedlinenum;
+    }
+
+    public void setConnectedlinenum(String connectedlinenum) {
+        this.connectedlinenum = connectedlinenum;
+    }
+
+    public String getChannelstatedesc() {
+        return channelstatedesc;
+    }
+
+    public void setChannelstatedesc(String channelstatedesc) {
+        this.channelstatedesc = channelstatedesc;
+    }
+
+    public Integer getChannelstate() {
+        return channelstate;
+    }
+
+    public void setChannelstate(Integer channelstate) {
+        this.channelstate = channelstate;
+    }
+
+    public String getConnectedlinename() {
+        return connectedlinename;
+    }
+
+    public void setConnectedlinename(String connectedlinename) {
+        this.connectedlinename = connectedlinename;
+    }
+
+    public Integer getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Integer priority) {
+        this.priority = priority;
+    }
 }

@@ -34,6 +34,11 @@ public class HangupEvent extends AbstractChannelEvent
     private String causeTxt;
     private String connectedlinename;
     private String connectedlinenum;
+    private String exten;
+    private String context;
+    private Integer channelstate;
+    private String channelstatedesc;
+    private Integer priority;
 
     public HangupEvent(Object source)
     {
@@ -113,5 +118,45 @@ public class HangupEvent extends AbstractChannelEvent
     public void setConnectedlinenum(String connectedlinenum)
     {
         this.connectedlinenum = connectedlinenum;
+    }
+
+    public String getExten() {
+        return exten;
+    }
+
+    public void setExten(String exten) {
+        this.exten = exten;
+    }
+
+    public String getContext() {
+        return context;
+    }
+
+    public void setContext(String context) {
+        this.context = context;
+    }
+
+    public Integer getChannelstate() {
+        return channelstate;
+    }
+
+    public void setChannelstate(Integer channelstate) {
+        this.channelstate = channelstate;
+    }
+
+    public String getChannelstatedesc() {
+        return channelstatedesc;
+    }
+
+    public void setChannelstatedesc(String channelstatedesc) {
+        this.channelstatedesc = channelstatedesc;
+    }
+
+    public Integer getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Integer priority) {
+        this.priority = priority;
     }
 }

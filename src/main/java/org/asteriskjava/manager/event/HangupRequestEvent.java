@@ -29,6 +29,13 @@ public class HangupRequestEvent extends AbstractChannelEvent
 
 
     private String uniqueid;
+    private String exten;
+    private String context;
+    private String connectedlinenum;
+    private String channelstatedesc;
+    private String connectedlinename;
+    private String priority;
+    private String channelstate;
 
 
     public HangupRequestEvent(Object source)
@@ -45,4 +52,59 @@ public class HangupRequestEvent extends AbstractChannelEvent
         this.uniqueid = uniqueid;
     }
 
+    public String getExten() {
+        return exten;
+    }
+
+    public void setExten(String exten) {
+        this.exten = exten;
+    }
+
+    public String getContext() {
+        return context;
+    }
+
+    public void setContext(String context) {
+        this.context = context;
+    }
+
+    public String getConnectedlinenum() {
+        return connectedlinenum;
+    }
+
+    public void setConnectedlinenum(String connectedlinenum) {
+        this.connectedlinenum = connectedlinenum;
+    }
+
+    public String getChannelstatedesc() {
+        return channelstatedesc;
+    }
+
+    public void setChannelstatedesc(String channelstatedesc) {
+        this.channelstatedesc = channelstatedesc;
+    }
+
+    public String getConnectedlinename() {
+        return connectedlinename;
+    }
+
+    public void setConnectedlinename(String connectedlinename) {
+        this.connectedlinename = connectedlinename;
+    }
+
+    public String getPriority() {
+        return priority;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
+    }
+
+    public String getChannelstate() {
+        return channelstate;
+    }
+
+    public void setChannelstate(String channelstate) {
+        this.channelstate = channelstate;
+    }
 }
