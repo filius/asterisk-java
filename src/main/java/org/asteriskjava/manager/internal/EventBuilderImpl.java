@@ -62,6 +62,7 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(BridgeEvent.class);
         registerEventClass(BridgeExecEvent.class);
         registerEventClass(CdrEvent.class);
+        registerEventClass(ChallengeSentEvent.class);
         registerEventClass(ChannelReloadEvent.class);
         registerEventClass(ChannelUpdateEvent.class);
         registerEventClass(ChanSpyStartEvent.class);
@@ -104,6 +105,7 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(JabberEventEvent.class);
         registerEventClass(JitterBufStatsEvent.class);
         registerEventClass(JoinEvent.class);
+        registerEventClass(InvalidPasswordEvent.class);
         registerEventClass(LeaveEvent.class);
         registerEventClass(LinkEvent.class);
         registerEventClass(ListDialplanEvent.class);
@@ -173,6 +175,7 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(SoftHangupRequestEvent.class);
         registerEventClass(StatusEvent.class);
         registerEventClass(StatusCompleteEvent.class);
+        registerEventClass(SuccessfulAuthEvent.class);
         registerEventClass(T38FaxStatusEvent.class);
         registerEventClass(TransferEvent.class);
         registerEventClass(UnholdEvent.class);
