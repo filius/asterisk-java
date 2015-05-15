@@ -177,8 +177,9 @@ public class SocketConnectionFacadeImpl implements SocketConnectionFacade
     {
         socket.close();
         scanner.close();
-        if (trace != null) {
-            trace.close();
+        // close the trace only if it was activated (the object is not null)
+        if (trace != null){
+        	trace.close();
         }
     }
 

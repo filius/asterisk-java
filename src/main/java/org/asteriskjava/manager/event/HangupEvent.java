@@ -23,7 +23,7 @@ package org.asteriskjava.manager.event;
  * @author srt
  * @version $Id$
  */
-public class HangupEvent extends AbstractChannelEvent
+public class HangupEvent extends AbstractChannelStateEvent
 {
     /**
      * Serializable version identifier.
@@ -32,19 +32,27 @@ public class HangupEvent extends AbstractChannelEvent
 
     private Integer cause;
     private String causeTxt;
-    private String connectedlinename;
-    private String connectedlinenum;
-    private String exten;
-    private String context;
     private Integer channelstate;
     private String channelstatedesc;
-    private Integer priority;
+    private String language;
 
+    private String accountCode;
+    
     public HangupEvent(Object source)
     {
         super(source);
     }
 
+    public String getLanguage()
+    {
+    	return language;
+    }
+    
+    public void setLanguage(String language)
+    {
+    	this.language = language;
+    }       
+    
     /**
      * Returns the cause of the hangup.
      *
@@ -88,53 +96,15 @@ public class HangupEvent extends AbstractChannelEvent
         this.causeTxt = causeTxt;
     }
 
-    /**
-     * Returns the Caller*ID name of the channel connected if set.
-     * If the channel has no caller id set "unknown" is returned.
-     *
-     * @since 1.0.0
-     */
-    public String getConnectedlinename()
-    {
-        return connectedlinename;
-    }
+	public String getAccountCode() 
+	{
+		return accountCode;
+	}
 
-    public void setConnectedlinename(String connectedlinename)
-    {
-        this.connectedlinename = connectedlinename;
-    }
-
-    /**
-     * Returns the Caller*ID number of the channel connected if set.
-     * If the channel has no caller id set "unknown" is returned.
-     *
-     * @since 1.0.0
-     */
-    public String getConnectedlinenum()
-    {
-        return connectedlinenum;
-    }
-
-    public void setConnectedlinenum(String connectedlinenum)
-    {
-        this.connectedlinenum = connectedlinenum;
-    }
-
-    public String getExten() {
-        return exten;
-    }
-
-    public void setExten(String exten) {
-        this.exten = exten;
-    }
-
-    public String getContext() {
-        return context;
-    }
-
-    public void setContext(String context) {
-        this.context = context;
-    }
+	public void setAccountCode(String accountCode) 
+	{
+		this.accountCode = accountCode;
+	}
 
     public Integer getChannelstate() {
         return channelstate;
@@ -152,11 +122,21 @@ public class HangupEvent extends AbstractChannelEvent
         this.channelstatedesc = channelstatedesc;
     }
 
-    public Integer getPriority() {
-        return priority;
-    }
-
-    public void setPriority(Integer priority) {
-        this.priority = priority;
-    }
+	@Override
+	public String toString() 
+	{
+		StringBuilder builder = new StringBuilder();
+		builder.append("HangupEvent [cause=");
+		builder.append(cause);
+		builder.append(", causeTxt=");
+		builder.append(causeTxt);
+		builder.append(", accountCode=");
+		builder.append(accountCode);
+		builder.append(", connectedLineNum=");
+		builder.append(connectedLineNum);
+		builder.append(", connectedLineName=");
+		builder.append(connectedLineName);
+		builder.append("]");
+		return builder.toString();
+	}
 }

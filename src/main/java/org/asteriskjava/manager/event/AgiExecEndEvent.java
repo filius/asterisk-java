@@ -1,13 +1,18 @@
 package org.asteriskjava.manager.event;
 
 /**
- * User: fil
- * Date: 15.05.15
+ * Created by plhk on 1/15/15.
  */
-public class AgiExecEndEvent extends ManagerEvent {
+public class AgiExecEndEvent extends AgiExecEvent
+{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
-    public AgiExecEndEvent(Object source) {
-        super(source);
-    }
-
+	public AgiExecEndEvent(Object source)
+	{
+		super(source);
+		setSubEvent(SUB_EVENT_END);
+	}
 }

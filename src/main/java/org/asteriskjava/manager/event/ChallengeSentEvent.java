@@ -1,94 +1,116 @@
 package org.asteriskjava.manager.event;
 
 /**
- * User: fil
- * Date: 07.05.15
+ * Created by plhk on 1/15/15.
  */
-public class ChallengeSentEvent extends ManagerEvent {
+public class ChallengeSentEvent extends ManagerEvent
+{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String severity;
+	private Integer eventVersion;
+	private String accountId;
+	private String service;
+	private String eventtv;
+	private String remoteAddress;
+	private String localAddress;
+	private String challenge;
+	private String sessionId;
 
-    private String challenge;
-    private String remoteaddress;
-    private String service;
-    private String accountid;
-    private String localaddress;
-    private String sessionid;
-    private String eventtv;
-    private String eventversion;
-    private String severity;
+	public ChallengeSentEvent(Object source)
+	{
+		super(source);
+	}
 
-    public ChallengeSentEvent(Object source) {
-        super(source);
-    }
+	public String getSeverity()
+	{
+		return severity;
+	}
 
-    public String getChallenge() {
-        return challenge;
-    }
+	public void setSeverity(String severity)
+	{
+		this.severity = severity;
+	}
 
-    public void setChallenge(String challenge) {
-        this.challenge = challenge;
-    }
+	public Integer getEventVersion()
+	{
+		return eventVersion;
+	}
 
-    public String getRemoteaddress() {
-        return remoteaddress;
-    }
+	public void setEventVersion(Integer eventVersion)
+	{
+		this.eventVersion = eventVersion;
+	}
 
-    public void setRemoteaddress(String remoteaddress) {
-        this.remoteaddress = remoteaddress;
-    }
+	public String getAccountId()
+	{
+		return accountId;
+	}
 
-    public String getService() {
-        return service;
-    }
+	public void setAccountId(String accountId)
+	{
+		this.accountId = accountId;
+	}
 
-    public void setService(String service) {
-        this.service = service;
-    }
+	public String getService()
+	{
+		return service;
+	}
 
-    public String getAccountid() {
-        return accountid;
-    }
+	public void setService(String service)
+	{
+		this.service = service;
+	}
 
-    public void setAccountid(String accountid) {
-        this.accountid = accountid;
-    }
+	public String getEventtv()
+	{
+		return eventtv;
+	}
 
-    public String getLocaladdress() {
-        return localaddress;
-    }
+	public void setEventtv(String eventtv)
+	{
+		this.eventtv = eventtv;
+	}
 
-    public void setLocaladdress(String localaddress) {
-        this.localaddress = localaddress;
-    }
+	public String getRemoteAddress()
+	{
+		return remoteAddress;
+	}
 
-    public String getSessionid() {
-        return sessionid;
-    }
+	public void setRemoteAddress(String remoteAddress)
+	{
+		this.remoteAddress = remoteAddress;
+	}
 
-    public void setSessionid(String sessionid) {
-        this.sessionid = sessionid;
-    }
+	public String getLocalAddress()
+	{
+		return localAddress;
+	}
 
-    public String getEventtv() {
-        return eventtv;
-    }
+	public void setLocalAddress(String localAddress)
+	{
+		this.localAddress = localAddress;
+	}
 
-    public void setEventtv(String eventtv) {
-        this.eventtv = eventtv;
-    }
+	public String getChallenge()
+	{
+		return challenge;
+	}
 
-    public String getEventversion() {
-        return eventversion;
-    }
+	public void setChallenge(String challenge)
+	{
+		this.challenge = challenge;
+	}
 
-    public void setEventversion(String eventversion) {
-        this.eventversion = eventversion;
-    }
+	public String getSessionId()
+	{
+		return sessionId;
+	}
 
-    public String getSeverity() {
-        return severity;
-    }
-
-    public void setSeverity(String severity) {
-        this.severity = severity;
-    }
+	public void setSessionId(String sessionId)
+	{
+		this.sessionId = sessionId;
+	}
 }

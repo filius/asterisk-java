@@ -1,94 +1,127 @@
 package org.asteriskjava.manager.event;
 
 /**
- * User: fil
- * Date: 07.05.15
+ * Created by plhk on 1/15/15.
  */
-public class SuccessfulAuthEvent extends ManagerEvent {
+public class SuccessfulAuthEvent extends ManagerEvent
+{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String severity;
+	private Integer eventVersion;
+	private String accountId;
+	private Integer usingPassword;
+	private String sessiontv;
+	private String service;
+	private String eventtv;
+	private String remoteAddress;
+	private String localAddress;
+	private String sessionId;
 
-    private String remoteaddress;
-    private String service;
-    private String accountid;
-    private String localaddress;
-    private String sessionid;
-    private String eventtv;
-    private String usingpassword;
-    private String eventversion;
-    private String severity;
+	public SuccessfulAuthEvent(Object source)
+	{
+		super(source);
+	}
 
-    public SuccessfulAuthEvent(Object source) {
-        super(source);
-    }
+	public String getSeverity()
+	{
+		return severity;
+	}
 
-    public String getRemoteaddress() {
-        return remoteaddress;
-    }
+	public void setSeverity(String severity)
+	{
+		this.severity = severity;
+	}
 
-    public void setRemoteaddress(String remoteaddress) {
-        this.remoteaddress = remoteaddress;
-    }
+	public Integer getEventVersion()
+	{
+		return eventVersion;
+	}
 
-    public String getService() {
-        return service;
-    }
+	public void setEventVersion(Integer eventVersion)
+	{
+		this.eventVersion = eventVersion;
+	}
 
-    public void setService(String service) {
-        this.service = service;
-    }
+	public String getAccountId()
+	{
+		return accountId;
+	}
 
-    public String getAccountid() {
-        return accountid;
-    }
+	public void setAccountId(String accountId)
+	{
+		this.accountId = accountId;
+	}
 
-    public void setAccountid(String accountid) {
-        this.accountid = accountid;
-    }
+	public Integer getUsingPassword()
+	{
+		return usingPassword;
+	}
 
-    public String getLocaladdress() {
-        return localaddress;
-    }
+	public void setUsingPassword(Integer usingPassword)
+	{
+		this.usingPassword = usingPassword;
+	}
 
-    public void setLocaladdress(String localaddress) {
-        this.localaddress = localaddress;
-    }
+	public String getSessiontv()
+	{
+		return sessiontv;
+	}
 
-    public String getSessionid() {
-        return sessionid;
-    }
+	public void setSessiontv(String sessiontv)
+	{
+		this.sessiontv = sessiontv;
+	}
 
-    public void setSessionid(String sessionid) {
-        this.sessionid = sessionid;
-    }
+	public String getService()
+	{
+		return service;
+	}
 
-    public String getEventtv() {
-        return eventtv;
-    }
+	public void setService(String service)
+	{
+		this.service = service;
+	}
 
-    public void setEventtv(String eventtv) {
-        this.eventtv = eventtv;
-    }
+	public String getEventtv()
+	{
+		return eventtv;
+	}
 
-    public String getUsingpassword() {
-        return usingpassword;
-    }
+	public void setEventtv(String eventtv)
+	{
+		this.eventtv = eventtv;
+	}
 
-    public void setUsingpassword(String usingpassword) {
-        this.usingpassword = usingpassword;
-    }
+	public String getRemoteAddress()
+	{
+		return remoteAddress;
+	}
 
-    public String getEventversion() {
-        return eventversion;
-    }
+	public void setRemoteAddress(String remoteAddress)
+	{
+		this.remoteAddress = remoteAddress;
+	}
 
-    public void setEventversion(String eventversion) {
-        this.eventversion = eventversion;
-    }
+	public String getLocalAddress()
+	{
+		return localAddress;
+	}
 
-    public String getSeverity() {
-        return severity;
-    }
+	public void setLocalAddress(String localAddress)
+	{
+		this.localAddress = localAddress;
+	}
 
-    public void setSeverity(String severity) {
-        this.severity = severity;
-    }
+	public String getSessionId()
+	{
+		return sessionId;
+	}
+
+	public void setSessionId(String sessionId)
+	{
+		this.sessionId = sessionId;
+	}
 }

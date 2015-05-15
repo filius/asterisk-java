@@ -56,10 +56,8 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
     private String calleridname;
     private String channel;
     private String report0sourcessrc;
-    private String exten;
     private Double report0dlsr;
     private String calleridnum;
-    private String context;
     private String sentntp;
     private String sentpackets;
     private String sentrtp;
@@ -71,7 +69,6 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
     private String report0sequencenumbercycles;
     private String ssrc;
     private String connectedlinename;
-    private String priority;
     private String report0highestsequence;
     private String channelstate;
     private String report0fractionlost;
@@ -272,14 +269,6 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
         this.report0sourcessrc = report0sourcessrc;
     }
 
-    public String getExten() {
-        return exten;
-    }
-
-    public void setExten(String exten) {
-        this.exten = exten;
-    }
-
     public Double getReport0dlsr() {
         return report0dlsr;
     }
@@ -294,14 +283,6 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
 
     public void setCalleridnum(String calleridnum) {
         this.calleridnum = calleridnum;
-    }
-
-    public String getContext() {
-        return context;
-    }
-
-    public void setContext(String context) {
-        this.context = context;
     }
 
     public String getSentntp() {
@@ -392,14 +373,6 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
         this.connectedlinename = connectedlinename;
     }
 
-    public String getPriority() {
-        return priority;
-    }
-
-    public void setPriority(String priority) {
-        this.priority = priority;
-    }
-
     public String getReport0highestsequence() {
         return report0highestsequence;
     }
@@ -446,5 +419,9 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
 
     public void setTo(String to) {
         this.to = to;
+    }
+    
+    public Long getRttAsMillseconds(){
+    	return (long) (rtt * 1000);
     }
 }

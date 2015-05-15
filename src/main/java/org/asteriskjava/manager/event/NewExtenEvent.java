@@ -31,19 +31,11 @@ public class NewExtenEvent extends ManagerEvent
     static final long serialVersionUID = -467486409866099387L;
 
     private String uniqueId;
-    private String context;
     private String extension;
     private String application;
     private String appData;
-    private Integer priority;
     private String channel;
-    private String callerIdName;
-    private String callerIdNum;
-    private String connectedLineName;
-    private Integer channelState;
-    private String exten;
-    private String connectedLineNum;
-    private String channelStateDesc;
+    private String language;
 
     /**
      * @param source
@@ -53,6 +45,16 @@ public class NewExtenEvent extends ManagerEvent
         super(source);
     }
 
+    public String getLanguage()
+    {
+    	return language;
+    }
+    
+    public void setLanguage(String language)
+    {
+    	this.language = language;
+    }   
+    
     /**
      * Returns the unique id of the channel.
      */
@@ -119,22 +121,6 @@ public class NewExtenEvent extends ManagerEvent
     }
 
     /**
-     * Returns the name of the context of the connected extension.
-     */
-    public String getContext()
-    {
-        return context;
-    }
-
-    /**
-     * Sets the name of the context of the connected extension.
-     */
-    public void setContext(String context)
-    {
-        this.context = context;
-    }
-
-    /**
      * Returns the extension.
      */
     public String getExtension()
@@ -150,75 +136,4 @@ public class NewExtenEvent extends ManagerEvent
         this.extension = extension;
     }
 
-    /**
-     * Returns the priority.
-     */
-    public Integer getPriority()
-    {
-        return priority;
-    }
-
-    /**
-     * Sets the priority.
-     */
-    public void setPriority(Integer priority)
-    {
-        this.priority = priority;
-    }
-
-    public String getCallerIdName() {
-        return callerIdName;
-    }
-
-    public void setCallerIdName(String callerIdName) {
-        this.callerIdName = callerIdName;
-    }
-
-    public String getCallerIdNum() {
-        return callerIdNum;
-    }
-
-    public void setCallerIdNum(String callerIdNum) {
-        this.callerIdNum = callerIdNum;
-    }
-
-    public String getConnectedLineName() {
-        return connectedLineName;
-    }
-
-    public void setConnectedLineName(String connectedLineName) {
-        this.connectedLineName = connectedLineName;
-    }
-
-    public Integer getChannelState() {
-        return channelState;
-    }
-
-    public void setChannelState(Integer channelState) {
-        this.channelState = channelState;
-    }
-
-    public String getExten() {
-        return exten;
-    }
-
-    public void setExten(String exten) {
-        this.exten = exten;
-    }
-
-    public String getConnectedLineNum() {
-        return connectedLineNum;
-    }
-
-    public void setConnectedLineNum(String connectedLineNum) {
-        this.connectedLineNum = connectedLineNum;
-    }
-
-    public String getChannelStateDesc() {
-        return channelStateDesc;
-    }
-
-    public void setChannelStateDesc(String channelStateDesc) {
-        this.channelStateDesc = channelStateDesc;
-    }
 }

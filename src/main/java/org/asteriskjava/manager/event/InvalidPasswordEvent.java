@@ -1,112 +1,140 @@
 package org.asteriskjava.manager.event;
 
+import java.math.BigInteger;
+
 /**
- * User: fil
- * Date: 07.05.15
+ * Created by Alexander Polakov <apolyakov@beget.ru> on 1/23/15.
  */
-public class InvalidPasswordEvent extends ManagerEvent {
+public class InvalidPasswordEvent extends ManagerEvent
+{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String severity;
+	private Integer eventVersion;
+	private String eventtv;
+	private String sessionid;
+	private String receivedHash;
+	private String localaddress;
+	private BigInteger accountId;
+	private String receivedChallenge;
+	private String service;
+	private String remoteAddress;
+	private String challenge;
 
-    private String challenge;
-    private String remoteaddress;
-    private String service;
-    private String receivedchallenge;
-    private String accountid;
-    private String localaddress;
-    private String receivedhash;
-    private String sessionid;
-    private String eventtv;
-    private String eventversion;
-    private String severity;
+	public InvalidPasswordEvent(Object source)
+	{
+		super(source);
+	}
 
-    public InvalidPasswordEvent(Object source) {
-        super(source);
-    }
+	public String getSeverity()
+	{
+		return severity;
+	}
 
-    public String getChallenge() {
-        return challenge;
-    }
+	public void setSeverity(String severity)
+	{
+		this.severity = severity;
+	}
 
-    public void setChallenge(String challenge) {
-        this.challenge = challenge;
-    }
+	public Integer getEventVersion()
+	{
+		return eventVersion;
+	}
 
-    public String getRemoteaddress() {
-        return remoteaddress;
-    }
+	public void setEventVersion(Integer eventVersion)
+	{
+		this.eventVersion = eventVersion;
+	}
 
-    public void setRemoteaddress(String remoteaddress) {
-        this.remoteaddress = remoteaddress;
-    }
+	public String getEventtv()
+	{
+		return eventtv;
+	}
 
-    public String getService() {
-        return service;
-    }
+	public void setEventtv(String eventtv)
+	{
+		this.eventtv = eventtv;
+	}
 
-    public void setService(String service) {
-        this.service = service;
-    }
+	public String getSessionid()
+	{
+		return sessionid;
+	}
 
-    public String getReceivedchallenge() {
-        return receivedchallenge;
-    }
+	public void setSessionid(String sessionid)
+	{
+		this.sessionid = sessionid;
+	}
 
-    public void setReceivedchallenge(String receivedchallenge) {
-        this.receivedchallenge = receivedchallenge;
-    }
+	public String getReceivedHash()
+	{
+		return receivedHash;
+	}
 
-    public String getAccountid() {
-        return accountid;
-    }
+	public void setReceivedHash(String receivedHash)
+	{
+		this.receivedHash = receivedHash;
+	}
 
-    public void setAccountid(String accountid) {
-        this.accountid = accountid;
-    }
+	public String getLocaladdress()
+	{
+		return localaddress;
+	}
 
-    public String getLocaladdress() {
-        return localaddress;
-    }
+	public void setLocaladdress(String localaddress)
+	{
+		this.localaddress = localaddress;
+	}
 
-    public void setLocaladdress(String localaddress) {
-        this.localaddress = localaddress;
-    }
+	public BigInteger getAccountId()
+	{
+		return accountId;
+	}
 
-    public String getReceivedhash() {
-        return receivedhash;
-    }
+	public void setAccountId(BigInteger accountId)
+	{
+		this.accountId = accountId;
+	}
 
-    public void setReceivedhash(String receivedhash) {
-        this.receivedhash = receivedhash;
-    }
+	public String getReceivedChallenge()
+	{
+		return receivedChallenge;
+	}
 
-    public String getSessionid() {
-        return sessionid;
-    }
+	public void setReceivedChallenge(String receivedChallenge)
+	{
+		this.receivedChallenge = receivedChallenge;
+	}
 
-    public void setSessionid(String sessionid) {
-        this.sessionid = sessionid;
-    }
+	public String getService()
+	{
+		return service;
+	}
 
-    public String getEventtv() {
-        return eventtv;
-    }
+	public void setService(String service)
+	{
+		this.service = service;
+	}
 
-    public void setEventtv(String eventtv) {
-        this.eventtv = eventtv;
-    }
+	public String getRemoteAddress()
+	{
+		return remoteAddress;
+	}
 
-    public String getEventversion() {
-        return eventversion;
-    }
+	public void setRemoteAddress(String remoteAddress)
+	{
+		this.remoteAddress = remoteAddress;
+	}
 
-    public void setEventversion(String eventversion) {
-        this.eventversion = eventversion;
-    }
+	public String getChallenge()
+	{
+		return challenge;
+	}
 
-    public String getSeverity() {
-        return severity;
-    }
-
-    public void setSeverity(String severity) {
-        this.severity = severity;
-    }
+	public void setChallenge(String challenge)
+	{
+		this.challenge = challenge;
+	}
 }

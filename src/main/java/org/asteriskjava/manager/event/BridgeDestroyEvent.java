@@ -1,11 +1,17 @@
 package org.asteriskjava.manager.event;
 
 /**
- * User: fil
- * Date: 15.05.15
+ * Created by Alexander Polakov <apolyakov@beget.ru> on 1/26/15.
  */
-public class BridgeDestroyEvent extends ManagerEvent {
-    public BridgeDestroyEvent(Object source) {
-        super(source);
-    }
+public class BridgeDestroyEvent extends AbstractBridgeEvent
+{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public BridgeDestroyEvent(Object source)
+	{
+		super(source);
+	}
 }

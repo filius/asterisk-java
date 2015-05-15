@@ -40,14 +40,7 @@ public class AgentCalledEvent extends ManagerEvent
     private String agentName;
     private String channelCalling;
     private String destinationChannel;
-    private String callerIdNum;
-    private String callerIdName;
-    private String context;
-    private String extension;
-    private String priority;
     private String uniqueId;
-    private String connectedlinename;
-    private String connectedlinenum;
     private String destchannel;
     private Integer destchannelstate;
     private String destcontext;
@@ -173,22 +166,6 @@ public class AgentCalledEvent extends ManagerEvent
     /**
      * Returns the Caller ID number of the caller's channel.
      *
-     * @return the Caller ID number of the caller's channel or "unknown" of none has been set.
-     * @since 1.0.0
-     */
-    public String getCallerIdNum()
-    {
-        return callerIdNum;
-    }
-
-    public void setCallerIdNum(String callerIdNum)
-    {
-        this.callerIdNum = callerIdNum;
-    }
-
-    /**
-     * Returns the Caller ID number of the caller's channel.
-     *
      * @return the Caller ID number of the caller's channel.
      * @deprecated as of 1.0.0, use {@link #getCallerIdNum()} instead.
      */
@@ -207,56 +184,14 @@ public class AgentCalledEvent extends ManagerEvent
         this.callerIdNum = callerId;
     }
 
-    /**
-     * Returns the Caller ID name of the caller's channel.
-     *
-     * @return the Caller ID name of the caller's channel or "unknown" if none has been set.
-     * @since 0.2
-     */
-    public String getCallerIdName()
-    {
-        return callerIdName;
-    }
-
-    /**
-     * Sets the Caller ID name of the caller's channel.
-     *
-     * @param callerIdName the Caller ID name of the caller's channel.
-     * @since 0.2
-     */
-    public void setCallerIdName(String callerIdName)
-    {
-        this.callerIdName = callerIdName;
-    }
-
-    public String getContext()
-    {
-        return context;
-    }
-
-    public void setContext(String context)
-    {
-        this.context = context;
-    }
-
     public String getExtension()
     {
-        return extension;
+        return exten;
     }
 
     public void setExtension(String extension)
     {
-        this.extension = extension;
-    }
-
-    public String getPriority()
-    {
-        return priority;
-    }
-
-    public void setPriority(String priority)
-    {
-        this.priority = priority;
+        this.exten = extension;
     }
 
     /**
@@ -308,15 +243,6 @@ public class AgentCalledEvent extends ManagerEvent
      *
      * @since 1.0.0
      */
-    public String getConnectedlinename()
-    {
-        return connectedlinename;
-    }
-
-    public void setConnectedlinename(String connectedlinename)
-    {
-        this.connectedlinename = connectedlinename;
-    }
 
     /**
      * Returns the Caller*ID number of the channel connected if set.
@@ -324,15 +250,6 @@ public class AgentCalledEvent extends ManagerEvent
      *
      * @since 1.0.0
      */
-    public String getConnectedlinenum()
-    {
-        return connectedlinenum;
-    }
-
-    public void setConnectedlinenum(String connectedlinenum)
-    {
-        this.connectedlinenum = connectedlinenum;
-    }
 
     public String getDestchannel() {
         return destchannel;
@@ -380,14 +297,6 @@ public class AgentCalledEvent extends ManagerEvent
 
     public void setInterfaceName(String interfaceName) {
         this.interfaceName = interfaceName;
-    }
-
-    public String getExten() {
-        return exten;
-    }
-
-    public void setExten(String exten) {
-        this.exten = exten;
     }
 
     public String getDestexten() {
