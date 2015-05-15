@@ -55,12 +55,18 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(AgentRingNoAnswerEvent.class);
         registerEventClass(AgentsEvent.class);
         registerEventClass(AgentsCompleteEvent.class);
+        registerEventClass(AgiExecEndEvent.class);
         registerEventClass(AgiExecEvent.class);
+        registerEventClass(AgiExecStartEvent.class);
         registerEventClass(AsyncAgiEvent.class);
         registerEventClass(AlarmEvent.class);
         registerEventClass(AlarmClearEvent.class);
+        registerEventClass(BridgeCreateEvent.class);
+        registerEventClass(BridgeDestroyEvent.class);
+        registerEventClass(BridgeEnterEvent.class);
         registerEventClass(BridgeEvent.class);
         registerEventClass(BridgeExecEvent.class);
+        registerEventClass(BridgeLeaveEvent.class);
         registerEventClass(CdrEvent.class);
         registerEventClass(ChallengeSentEvent.class);
         registerEventClass(ChannelReloadEvent.class);
@@ -82,6 +88,8 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(DahdiShowChannelsEvent.class);
         registerEventClass(DahdiShowChannelsCompleteEvent.class);
         registerEventClass(DbGetResponseEvent.class);
+        registerEventClass(DialBeginEvent.class);
+        registerEventClass(DialEndEvent.class);
         registerEventClass(DialEvent.class);
         registerEventClass(DndStateEvent.class);
         registerEventClass(DongleNewSMSBase64Event.class);
@@ -123,6 +131,8 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(MonitorStartEvent.class);
         registerEventClass(MonitorStopEvent.class);
         registerEventClass(MusicOnHoldEvent.class);
+        registerEventClass(MusicOnHoldStartEvent.class);
+        registerEventClass(MusicOnHoldStopEvent.class);
         registerEventClass(NewAccountCodeEvent.class);
         registerEventClass(NewCallerIdEvent.class);
         registerEventClass(NewChannelEvent.class);
@@ -140,6 +150,7 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(PeerStatusEvent.class);
         registerEventClass(PriEventEvent.class);
         registerEventClass(QueueCallerAbandonEvent.class);
+        registerEventClass(QueueCallerJoinEvent.class);
         registerEventClass(QueueEntryEvent.class);
         registerEventClass(QueueMemberAddedEvent.class);
         registerEventClass(QueueMemberEvent.class);
