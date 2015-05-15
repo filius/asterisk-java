@@ -130,9 +130,9 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
             return;
         }
 
-        if (ptString.indexOf('(') > 0)
+        if (ptString.indexOf("(") > 0)
         {
-            this.pt = Long.parseLong(ptString.substring(0, ptString.indexOf('(')));
+            this.pt = Long.parseLong(ptString.substring(0, ptString.indexOf("(")));
         }
         else
         {
@@ -231,10 +231,6 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
 
     public void setFromPort(Integer fromPort) {
         this.fromPort = fromPort;
-    }
-
-    public void setPt(Long pt) {
-        this.pt = pt;
     }
 
     public String getReport0lsr() {

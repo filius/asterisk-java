@@ -58,7 +58,6 @@ public class RtcpSentEvent extends AbstractRtcpEvent
     private String report0sequencenumbercycles;
     private String ssrc;
     private String connectedlinename;
-    private String priority;
     private String report0highestsequence;
     private String channelstate;
     private String report0fractionlost;
@@ -330,14 +329,6 @@ public class RtcpSentEvent extends AbstractRtcpEvent
 
     public void setConnectedlinename(String connectedlinename) {
         this.connectedlinename = connectedlinename;
-    }
-
-    public String getPriority() {
-        return priority;
-    }
-
-    public void setPriority(String priority) {
-        this.priority = priority;
     }
 
     public String getReport0highestsequence() {

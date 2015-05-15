@@ -46,7 +46,6 @@ public class AgentRingNoAnswerEvent extends AbstractAgentEvent
     private String channelstatedesc;
     private String destpriority;
     private String connectedlinename;
-    private String priority;
     private String destcalleridname;
     private String channelstate;
     private String destconnectedlinenum;
@@ -191,14 +190,6 @@ public class AgentRingNoAnswerEvent extends AbstractAgentEvent
 
     public void setConnectedlinename(String connectedlinename) {
         this.connectedlinename = connectedlinename;
-    }
-
-    public String getPriority() {
-        return priority;
-    }
-
-    public void setPriority(String priority) {
-        this.priority = priority;
     }
 
     public String getDestcalleridname() {

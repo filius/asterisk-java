@@ -4,15 +4,15 @@ package org.asteriskjava.manager.event;
  * User: fil
  * Date: 15.05.15
  */
-public class QueueCallerJoinEvent extends ManagerEvent {
+public class QueueCallerLeaveEvent extends ManagerEvent {
 
     private String channel;
+    private String uniqueid;
     private Integer count;
     private Integer position;
-    private String uniqueid;
     private String queue;
 
-    public QueueCallerJoinEvent(Object source) {
+    public QueueCallerLeaveEvent(Object source) {
         super(source);
     }
 
@@ -22,6 +22,14 @@ public class QueueCallerJoinEvent extends ManagerEvent {
 
     public void setChannel(String channel) {
         this.channel = channel;
+    }
+
+    public String getUniqueid() {
+        return uniqueid;
+    }
+
+    public void setUniqueid(String uniqueid) {
+        this.uniqueid = uniqueid;
     }
 
     public Integer getCount() {
@@ -38,14 +46,6 @@ public class QueueCallerJoinEvent extends ManagerEvent {
 
     public void setPosition(Integer position) {
         this.position = position;
-    }
-
-    public String getUniqueid() {
-        return uniqueid;
-    }
-
-    public void setUniqueid(String uniqueid) {
-        this.uniqueid = uniqueid;
     }
 
     public String getQueue() {
