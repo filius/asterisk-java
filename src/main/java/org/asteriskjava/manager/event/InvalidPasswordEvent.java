@@ -1,7 +1,5 @@
 package org.asteriskjava.manager.event;
 
-import java.math.BigInteger;
-
 /**
  * Created by Alexander Polakov <apolyakov@beget.ru> on 1/23/15.
  */
@@ -88,11 +86,13 @@ public class InvalidPasswordEvent extends ManagerEvent
 		this.localaddress = localaddress;
 	}
 
-	public String getAccountId() {
+	public String getAccountId()
+	{
 		return accountId;
 	}
 
-	public void setAccountId(String accountId) {
+	public void setAccountId(String accountId)
+	{
 		this.accountId = accountId;
 	}
 
