@@ -45,10 +45,8 @@ public class RtcpSentEvent extends AbstractRtcpEvent
     private String pt;
     private String channel;
     private String report0sourcessrc;
-    private String exten;
     private String report0dlsr;
     private String calleridnum;
-    private String context;
     private String from;
     private String connectedlinenum;
     private String uniqueid;
@@ -227,14 +225,6 @@ public class RtcpSentEvent extends AbstractRtcpEvent
         this.report0sourcessrc = report0sourcessrc;
     }
 
-    public String getExten() {
-        return exten;
-    }
-
-    public void setExten(String exten) {
-        this.exten = exten;
-    }
-
     public String getReport0dlsr() {
         return report0dlsr;
     }
@@ -249,14 +239,6 @@ public class RtcpSentEvent extends AbstractRtcpEvent
 
     public void setCalleridnum(String calleridnum) {
         this.calleridnum = calleridnum;
-    }
-
-    public String getContext() {
-        return context;
-    }
-
-    public void setContext(String context) {
-        this.context = context;
     }
 
     public String getFrom() {

@@ -37,10 +37,8 @@ public class AgentRingNoAnswerEvent extends AbstractAgentEvent
     private String calleridname;
     private String destconnectedlinename;
     private String interfaceName;
-    private String exten;
     private String destexten;
     private String calleridnum;
-    private String context;
     private String destuniqueid;
     private String connectedlinenum;
     private String channelstatedesc;
@@ -120,14 +118,6 @@ public class AgentRingNoAnswerEvent extends AbstractAgentEvent
         this.interfaceName = interfaceName;
     }
 
-    public String getExten() {
-        return exten;
-    }
-
-    public void setExten(String exten) {
-        this.exten = exten;
-    }
-
     public String getDestexten() {
         return destexten;
     }
@@ -142,14 +132,6 @@ public class AgentRingNoAnswerEvent extends AbstractAgentEvent
 
     public void setCalleridnum(String calleridnum) {
         this.calleridnum = calleridnum;
-    }
-
-    public String getContext() {
-        return context;
-    }
-
-    public void setContext(String context) {
-        this.context = context;
     }
 
     public String getDestuniqueid() {

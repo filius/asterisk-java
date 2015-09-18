@@ -55,7 +55,7 @@ public class AgentCalledEvent extends ManagerEvent
     private String destconnectedlinenum;
     private String destchannelstatedesc;
     private String destcalleridnum;
-    private String membername;
+    private String memberName;
 
     private Map<String, String> variables;
 
@@ -376,12 +376,11 @@ public class AgentCalledEvent extends ManagerEvent
         this.destcalleridnum = destcalleridnum;
     }
 
-    public String getMembername() {
-        return membername;
+    public String getMemberName() {
+        return memberName;
     }
 
-    public void setMembername(String membername) {
-        this.membername = membername;
+    public void setMemberName(String memberName) {
+        this.memberName = memberName;
     }
-
 }

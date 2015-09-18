@@ -38,9 +38,7 @@ public class AgentCompleteEvent extends AbstractAgentEvent
     private String reason;
     private String interfaceName;
     private String calleridname;
-    private String exten;
     private String calleridnum;
-    private String context;
     private String connectedlinenum;
     private String channelstatedesc;
     private String connectedlinename;
@@ -141,28 +139,12 @@ public class AgentCompleteEvent extends AbstractAgentEvent
         this.calleridname = calleridname;
     }
 
-    public String getExten() {
-        return exten;
-    }
-
-    public void setExten(String exten) {
-        this.exten = exten;
-    }
-
     public String getCalleridnum() {
         return calleridnum;
     }
 
     public void setCalleridnum(String calleridnum) {
         this.calleridnum = calleridnum;
-    }
-
-    public String getContext() {
-        return context;
-    }
-
-    public void setContext(String context) {
-        this.context = context;
     }
 
     public String getConnectedlinenum() {

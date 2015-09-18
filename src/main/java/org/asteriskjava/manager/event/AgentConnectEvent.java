@@ -38,13 +38,9 @@ public class AgentConnectEvent extends AbstractAgentEvent
     private String destchannel;
     private Integer destchannelstate;
     private String destcontext;
-    private String calleridname;
     private String destconnectedlinename;
     private String interfaceName;
-    private String exten;
     private String destexten;
-    private String calleridnum;
-    private String context;
     private String destuniqueid;
     private String connectedlinenum;
     private String channelstatedesc;
@@ -147,14 +143,6 @@ public class AgentConnectEvent extends AbstractAgentEvent
         this.destcontext = destcontext;
     }
 
-    public String getCalleridname() {
-        return calleridname;
-    }
-
-    public void setCalleridname(String calleridname) {
-        this.calleridname = calleridname;
-    }
-
     public String getDestconnectedlinename() {
         return destconnectedlinename;
     }
@@ -171,36 +159,12 @@ public class AgentConnectEvent extends AbstractAgentEvent
         this.interfaceName = interfaceName;
     }
 
-    public String getExten() {
-        return exten;
-    }
-
-    public void setExten(String exten) {
-        this.exten = exten;
-    }
-
     public String getDestexten() {
         return destexten;
     }
 
     public void setDestexten(String destexten) {
         this.destexten = destexten;
-    }
-
-    public String getCalleridnum() {
-        return calleridnum;
-    }
-
-    public void setCalleridnum(String calleridnum) {
-        this.calleridnum = calleridnum;
-    }
-
-    public String getContext() {
-        return context;
-    }
-
-    public void setContext(String context) {
-        this.context = context;
     }
 
     public String getDestuniqueid() {
