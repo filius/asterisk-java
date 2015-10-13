@@ -39,22 +39,20 @@ public class AgentCalledEvent extends ManagerEvent
     private String channelCalling;
     private String destinationChannel;
     private String uniqueId;
-    private String destchannel;
-    private Integer destchannelstate;
-    private String destcontext;
-    private String destconnectedlinename;
+    private String destChannel;
+    private Integer destChannelState;
+    private String destContext;
+    private String destConnectedLineName;
     private String channel;
     private String interfaceName;
     private String exten;
-    private String destexten;
-    private String destuniqueid;
-    private String channelstatedesc;
-    private Integer destpriority;
-    private String destcalleridname;
-    private Integer channelstate;
-    private String destconnectedlinenum;
-    private String destchannelstatedesc;
-    private String destcalleridnum;
+    private String destExten;
+    private String destUniqueId;
+    private Integer destPriority;
+    private String destCallerIdName;
+    private String destConnectedLineNum;
+    private String destChannelStateDesc;
+    private String destCallerIdNum;
     private String memberName;
 
     private Map<String, String> variables;
@@ -256,36 +254,36 @@ public class AgentCalledEvent extends ManagerEvent
      * @since 1.0.0
      */
 
-    public String getDestchannel() {
-        return destchannel;
+    public String getDestChannel() {
+        return destChannel;
     }
 
-    public void setDestchannel(String destchannel) {
-        this.destchannel = destchannel;
+    public void setDestChannel(String destChannel) {
+        this.destChannel = destChannel;
     }
 
-    public Integer getDestchannelstate() {
-        return destchannelstate;
+    public Integer getDestChannelState() {
+        return destChannelState;
     }
 
-    public void setDestchannelstate(Integer destchannelstate) {
-        this.destchannelstate = destchannelstate;
+    public void setDestChannelState(Integer destChannelState) {
+        this.destChannelState = destChannelState;
     }
 
-    public String getDestcontext() {
-        return destcontext;
+    public String getDestContext() {
+        return destContext;
     }
 
-    public void setDestcontext(String destcontext) {
-        this.destcontext = destcontext;
+    public void setDestContext(String destContext) {
+        this.destContext = destContext;
     }
 
-    public String getDestconnectedlinename() {
-        return destconnectedlinename;
+    public String getDestConnectedLineName() {
+        return destConnectedLineName;
     }
 
-    public void setDestconnectedlinename(String destconnectedlinename) {
-        this.destconnectedlinename = destconnectedlinename;
+    public void setDestConnectedLineName(String destConnectedLineName) {
+        this.destConnectedLineName = destConnectedLineName;
     }
 
     public String getChannel() {
@@ -304,76 +302,60 @@ public class AgentCalledEvent extends ManagerEvent
         this.interfaceName = interfaceName;
     }
 
-    public String getDestexten() {
-        return destexten;
+    public String getDestExten() {
+        return destExten;
     }
 
-    public void setDestexten(String destexten) {
-        this.destexten = destexten;
+    public void setDestExten(String destExten) {
+        this.destExten = destExten;
     }
 
-    public String getDestuniqueid() {
-        return destuniqueid;
+    public String getDestUniqueId() {
+        return destUniqueId;
     }
 
-    public void setDestuniqueid(String destuniqueid) {
-        this.destuniqueid = destuniqueid;
+    public void setDestUniqueId(String destUniqueId) {
+        this.destUniqueId = destUniqueId;
     }
 
-    public String getChannelstatedesc() {
-        return channelstatedesc;
+    public Integer getDestPriority() {
+        return destPriority;
     }
 
-    public void setChannelstatedesc(String channelstatedesc) {
-        this.channelstatedesc = channelstatedesc;
+    public void setDestPriority(Integer destPriority) {
+        this.destPriority = destPriority;
     }
 
-    public Integer getDestpriority() {
-        return destpriority;
+    public String getDestCallerIdName() {
+        return destCallerIdName;
     }
 
-    public void setDestpriority(Integer destpriority) {
-        this.destpriority = destpriority;
+    public void setDestCallerIdName(String destCallerIdName) {
+        this.destCallerIdName = destCallerIdName;
     }
 
-    public String getDestcalleridname() {
-        return destcalleridname;
+    public String getDestConnectedLineNum() {
+        return destConnectedLineNum;
     }
 
-    public void setDestcalleridname(String destcalleridname) {
-        this.destcalleridname = destcalleridname;
+    public void setDestConnectedLineNum(String destConnectedLineNum) {
+        this.destConnectedLineNum = destConnectedLineNum;
     }
 
-    public Integer getChannelstate() {
-        return channelstate;
+    public String getDestChannelStateDesc() {
+        return destChannelStateDesc;
     }
 
-    public void setChannelstate(Integer channelstate) {
-        this.channelstate = channelstate;
+    public void setDestChannelStateDesc(String destChannelStateDesc) {
+        this.destChannelStateDesc = destChannelStateDesc;
     }
 
-    public String getDestconnectedlinenum() {
-        return destconnectedlinenum;
+    public String getDestCallerIdNum() {
+        return destCallerIdNum;
     }
 
-    public void setDestconnectedlinenum(String destconnectedlinenum) {
-        this.destconnectedlinenum = destconnectedlinenum;
-    }
-
-    public String getDestchannelstatedesc() {
-        return destchannelstatedesc;
-    }
-
-    public void setDestchannelstatedesc(String destchannelstatedesc) {
-        this.destchannelstatedesc = destchannelstatedesc;
-    }
-
-    public String getDestcalleridnum() {
-        return destcalleridnum;
-    }
-
-    public void setDestcalleridnum(String destcalleridnum) {
-        this.destcalleridnum = destcalleridnum;
+    public void setDestCallerIdNum(String destCallerIdNum) {
+        this.destCallerIdNum = destCallerIdNum;
     }
 
     public String getMemberName() {
