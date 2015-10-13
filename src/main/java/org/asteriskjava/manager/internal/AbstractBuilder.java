@@ -62,6 +62,11 @@ abstract class AbstractBuilder
                 setterName = "classname";
             }
 
+            if ("interface".equals(setterName))
+            {
+                setterName = "interfacename";
+            }
+
             setter = setters.get(setterName);
 
             if (setter == null && !setterName.endsWith("s")) // no exact match => try plural

@@ -26,8 +26,7 @@ package org.asteriskjava.manager.event;
  *
  * @author Leonardo de Souza
  */
-public class QueueCallerJoinEvent extends QueueEvent
-{
+public class QueueCallerJoinEvent extends QueueEvent {
 
     /**
      * Serializable version identifier
@@ -60,4 +59,5 @@ public class QueueCallerJoinEvent extends QueueEvent
     {
         this.position = position;
     }
+
 }

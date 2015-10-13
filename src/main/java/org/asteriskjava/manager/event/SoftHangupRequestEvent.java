@@ -76,9 +76,4 @@ public class SoftHangupRequestEvent extends AbstractChannelEvent
     public void setUniqueid(String uniqueid) {
         this.uniqueid = uniqueid;
     }
-
-
-
-
-
 }

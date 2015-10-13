@@ -32,6 +32,8 @@ public class HangupEvent extends AbstractChannelStateEvent
 
     private Integer cause;
     private String causeTxt;
+    private Integer channelstate;
+    private String channelstatedesc;
     private String language;
 
     private String accountCode;
@@ -104,6 +106,21 @@ public class HangupEvent extends AbstractChannelStateEvent
 		this.accountCode = accountCode;
 	}
 
+    public Integer getChannelstate() {
+        return channelstate;
+    }
+
+    public void setChannelstate(Integer channelstate) {
+        this.channelstate = channelstate;
+    }
+
+    public String getChannelstatedesc() {
+        return channelstatedesc;
+    }
+
+    public void setChannelstatedesc(String channelstatedesc) {
+        this.channelstatedesc = channelstatedesc;
+    }
 
 	@Override
 	public String toString() 

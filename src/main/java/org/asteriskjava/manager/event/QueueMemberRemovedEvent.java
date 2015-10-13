@@ -37,4 +37,5 @@ public class QueueMemberRemovedEvent extends AbstractQueueMemberEvent
     {
         super(source);
     }
+
 }

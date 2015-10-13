@@ -47,6 +47,39 @@ public abstract class ManagerEvent extends EventObject
     protected String exten;
     protected String callerIdNum;
     protected String callerIdName;
+    protected String context;
+
+    /**
+     * AMI authorization class.
+     */
+    private String privilege;
+
+    /**
+     * The point in time this event has been received from the Asterisk server.
+     */
+    private Date dateReceived;
+
+    private Double timestamp;
+
+    /**
+     * The server from which this event has been received (only used with
+     * AstManProxy).
+     */
+    private String server;
+
+    private String systemName;
+
+    // AJ-213 only used when debugging is turned on
+    private String file;
+    private Integer line;
+    private String func;
+    private Integer sequenceNumber;
+
+    public ManagerEvent(Object source)
+    {
+        super(source);
+
+    }
 
     /**
      * Returns the Caller ID name of the caller's channel.
@@ -144,40 +177,6 @@ public abstract class ManagerEvent extends EventObject
     public void setContext(String context)
     {
         this.context = context;
-    }
-
-    protected String context;
-
-    /**
-     * AMI authorization class.
-     */
-    private String privilege;
-
-    /**
-     * The point in time this event has been received from the Asterisk server.
-     */
-    private Date dateReceived;
-
-    private Double timestamp;
-
-    /**
-     * The server from which this event has been received (only used with
-     * AstManProxy).
-     */
-    private String server;
-
-    private String systemName;
-
-    // AJ-213 only used when debugging is turned on
-    private String file;
-    private Integer line;
-    private String func;
-    private Integer sequenceNumber;
-
-    public ManagerEvent(Object source)
-    {
-        super(source);
-
     }
 
     /**

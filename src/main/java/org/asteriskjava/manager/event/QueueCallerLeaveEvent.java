@@ -1,47 +1,54 @@
-/*
- *  Copyright 2004-2007 Stefan Reuter and others
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- *
- */
 package org.asteriskjava.manager.event;
 
-/**
- * A QueueCallerLeaveEvent is triggered when a caller leave a queue before
- * getting connected with an agent.
- * <p>
- * It is implemented in <code>apps/app_queue.c</code>
- * <p>
- * Available since Asterisk 1.4.
- *
- * @author Leonardo de Souza
- */
-public class QueueCallerLeaveEvent extends QueueEvent
-{
+    /**
+     * A QueueCallerLeaveEvent is triggered when a caller leave a queue before
+     * getting connected with an agent.
+     * <p>
+     * It is implemented in <code>apps/app_queue.c</code>
+     * <p>
+     * Available since Asterisk 1.4.
+     *
+     * @author Leonardo de Souza
+     */
+public class QueueCallerLeaveEvent extends ManagerEvent {
 
     /**
      * Serializable version identifier
      */
     private static final long serialVersionUID = 812069706662063871L;
 
+    private String channel;
+    private String uniqueid;
+    private Integer count;
     private Integer position;
+    private String queue;
 
-    /**
-     * @param source
-     */
-    public QueueCallerLeaveEvent(Object source)
-    {
+    public QueueCallerLeaveEvent(Object source) {
         super(source);
+    }
+
+    public String getChannel() {
+        return channel;
+    }
+
+    public void setChannel(String channel) {
+        this.channel = channel;
+    }
+
+    public String getUniqueid() {
+        return uniqueid;
+    }
+
+    public void setUniqueid(String uniqueid) {
+        this.uniqueid = uniqueid;
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
     }
 
     /**
@@ -60,4 +67,13 @@ public class QueueCallerLeaveEvent extends QueueEvent
     {
         this.position = position;
     }
+
+    public String getQueue() {
+        return queue;
+    }
+
+    public void setQueue(String queue) {
+        this.queue = queue;
+    }
+
 }

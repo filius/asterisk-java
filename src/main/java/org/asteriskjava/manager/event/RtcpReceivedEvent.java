@@ -52,6 +52,29 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
     private Long sequenceNumberCycles;
     private Double lastSr;
     private Double rtt;
+    private String report0lsr;
+    private String calleridname;
+    private String channel;
+    private String report0sourcessrc;
+    private Double report0dlsr;
+    private String calleridnum;
+    private String sentntp;
+    private String sentpackets;
+    private String sentrtp;
+    private String connectedlinenum;
+    private String uniqueid;
+    private String channelstatedesc;
+    private String reportcount;
+    private String report0cumulativelost;
+    private String report0sequencenumbercycles;
+    private String ssrc;
+    private String connectedlinename;
+    private String report0highestsequence;
+    private String channelstate;
+    private String report0fractionlost;
+    private String sentoctets;
+    private String report0iajitter;
+    private String to;
 
     public RtcpReceivedEvent(Object source)
     {
@@ -107,9 +130,9 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
             return;
         }
 
-        if (ptString.indexOf('(') > 0)
+        if (ptString.indexOf("(") > 0)
         {
-            this.pt = Long.parseLong(ptString.substring(0, ptString.indexOf('(')));
+            this.pt = Long.parseLong(ptString.substring(0, ptString.indexOf("(")));
         }
         else
         {
@@ -201,9 +224,200 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
     {
         this.rtt = secStringToDouble(rttString);
     }
+
+    public void setFromAddress(InetAddress fromAddress) {
+        this.fromAddress = fromAddress;
+    }
+
+    public void setFromPort(Integer fromPort) {
+        this.fromPort = fromPort;
+    }
+
+    public String getReport0lsr() {
+        return report0lsr;
+    }
+
+    public void setReport0lsr(String report0lsr) {
+        this.report0lsr = report0lsr;
+    }
+
+    public String getCalleridname() {
+        return calleridname;
+    }
+
+    public void setCalleridname(String calleridname) {
+        this.calleridname = calleridname;
+    }
+
+    public String getChannel() {
+        return channel;
+    }
+
+    public void setChannel(String channel) {
+        this.channel = channel;
+    }
+
+    public String getReport0sourcessrc() {
+        return report0sourcessrc;
+    }
+
+    public void setReport0sourcessrc(String report0sourcessrc) {
+        this.report0sourcessrc = report0sourcessrc;
+    }
+
+    public Double getReport0dlsr() {
+        return report0dlsr;
+    }
+
+    public void setReport0dlsr(Double report0dlsr) {
+        this.report0dlsr = report0dlsr;
+    }
+
+    public String getCalleridnum() {
+        return calleridnum;
+    }
+
+    public void setCalleridnum(String calleridnum) {
+        this.calleridnum = calleridnum;
+    }
+
+    public String getSentntp() {
+        return sentntp;
+    }
+
+    public void setSentntp(String sentntp) {
+        this.sentntp = sentntp;
+    }
+
+    public String getSentpackets() {
+        return sentpackets;
+    }
+
+    public void setSentpackets(String sentpackets) {
+        this.sentpackets = sentpackets;
+    }
+
+    public String getSentrtp() {
+        return sentrtp;
+    }
+
+    public void setSentrtp(String sentrtp) {
+        this.sentrtp = sentrtp;
+    }
+
+    public String getConnectedlinenum() {
+        return connectedlinenum;
+    }
+
+    public void setConnectedlinenum(String connectedlinenum) {
+        this.connectedlinenum = connectedlinenum;
+    }
+
+    public String getUniqueid() {
+        return uniqueid;
+    }
+
+    public void setUniqueid(String uniqueid) {
+        this.uniqueid = uniqueid;
+    }
+
+    public String getChannelstatedesc() {
+        return channelstatedesc;
+    }
+
+    public void setChannelstatedesc(String channelstatedesc) {
+        this.channelstatedesc = channelstatedesc;
+    }
+
+    public String getReportcount() {
+        return reportcount;
+    }
+
+    public void setReportcount(String reportcount) {
+        this.reportcount = reportcount;
+    }
+
+    public String getReport0cumulativelost() {
+        return report0cumulativelost;
+    }
+
+    public void setReport0cumulativelost(String report0cumulativelost) {
+        this.report0cumulativelost = report0cumulativelost;
+    }
+
+    public String getReport0sequencenumbercycles() {
+        return report0sequencenumbercycles;
+    }
+
+    public void setReport0sequencenumbercycles(String report0sequencenumbercycles) {
+        this.report0sequencenumbercycles = report0sequencenumbercycles;
+    }
+
+    public String getSsrc() {
+        return ssrc;
+    }
+
+    public void setSsrc(String ssrc) {
+        this.ssrc = ssrc;
+    }
+
+    public String getConnectedlinename() {
+        return connectedlinename;
+    }
+
+    public void setConnectedlinename(String connectedlinename) {
+        this.connectedlinename = connectedlinename;
+    }
+
+    public String getReport0highestsequence() {
+        return report0highestsequence;
+    }
+
+    public void setReport0highestsequence(String report0highestsequence) {
+        this.report0highestsequence = report0highestsequence;
+    }
+
+    public String getChannelstate() {
+        return channelstate;
+    }
+
+    public void setChannelstate(String channelstate) {
+        this.channelstate = channelstate;
+    }
+
+    public String getReport0fractionlost() {
+        return report0fractionlost;
+    }
+
+    public void setReport0fractionlost(String report0fractionlost) {
+        this.report0fractionlost = report0fractionlost;
+    }
+
+    public String getSentoctets() {
+        return sentoctets;
+    }
+
+    public void setSentoctets(String sentoctets) {
+        this.sentoctets = sentoctets;
+    }
+
+    public String getReport0iajitter() {
+        return report0iajitter;
+    }
+
+    public void setReport0iajitter(String report0iajitter) {
+        this.report0iajitter = report0iajitter;
+    }
+
+    public String getTo() {
+        return to;
+    }
+
+    public void setTo(String to) {
+        this.to = to;
+    }
     
-    public Long getRttAsMillseconds()
-    {
+    public Long getRttAsMillseconds(){
     	return (long) (rtt * 1000);
     }
 }

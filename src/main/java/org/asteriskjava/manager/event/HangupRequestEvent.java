@@ -29,6 +29,8 @@ public class HangupRequestEvent extends AbstractChannelEvent
 
     private Integer cause;
     private String uniqueid;
+    private String channelstatedesc;
+    private String channelstate;
     private String language;
 
     public String getLanguage()
@@ -75,4 +77,19 @@ public class HangupRequestEvent extends AbstractChannelEvent
         this.uniqueid = uniqueid;
     }
 
+    public String getChannelstatedesc() {
+        return channelstatedesc;
+    }
+
+    public void setChannelstatedesc(String channelstatedesc) {
+        this.channelstatedesc = channelstatedesc;
+    }
+
+    public String getChannelstate() {
+        return channelstate;
+    }
+
+    public void setChannelstate(String channelstate) {
+        this.channelstate = channelstate;
+    }
 }

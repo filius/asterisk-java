@@ -36,6 +36,12 @@ public class QueueCallerAbandonEvent extends QueueEvent
     private Integer position;
     private Integer originalPosition;
     private Integer holdTime;
+    private String calleridname;
+    private String calleridnum;
+    private String connectedlinenum;
+    private String channelstatedesc;
+    private String connectedlinename;
+    private String channelstate;
 
     /**
      * @param source
@@ -92,5 +98,53 @@ public class QueueCallerAbandonEvent extends QueueEvent
     public void setPosition(Integer position)
     {
         this.position = position;
+    }
+
+    public String getCalleridname() {
+        return calleridname;
+    }
+
+    public void setCalleridname(String calleridname) {
+        this.calleridname = calleridname;
+    }
+
+    public String getCalleridnum() {
+        return calleridnum;
+    }
+
+    public void setCalleridnum(String calleridnum) {
+        this.calleridnum = calleridnum;
+    }
+
+    public String getConnectedlinenum() {
+        return connectedlinenum;
+    }
+
+    public void setConnectedlinenum(String connectedlinenum) {
+        this.connectedlinenum = connectedlinenum;
+    }
+
+    public String getChannelstatedesc() {
+        return channelstatedesc;
+    }
+
+    public void setChannelstatedesc(String channelstatedesc) {
+        this.channelstatedesc = channelstatedesc;
+    }
+
+    public String getConnectedlinename() {
+        return connectedlinename;
+    }
+
+    public void setConnectedlinename(String connectedlinename) {
+        this.connectedlinename = connectedlinename;
+    }
+
+    public String getChannelstate() {
+        return channelstate;
+    }
+
+    public void setChannelstate(String channelstate) {
+        this.channelstate = channelstate;
     }
 }

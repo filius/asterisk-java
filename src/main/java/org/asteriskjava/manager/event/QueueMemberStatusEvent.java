@@ -47,4 +47,23 @@ public class QueueMemberStatusEvent extends QueueMemberEvent
     {
         super(source);
     }
+
+    private String interfaceName;
+    private Integer ringinuse;
+
+    public String getInterfaceName() {
+        return interfaceName;
+    }
+
+    public void setInterfaceName(String interfaceName) {
+        this.interfaceName = interfaceName;
+    }
+
+    public Integer getRinginuse() {
+        return ringinuse;
+    }
+
+    public void setRinginuse(Integer ringinuse) {
+        this.ringinuse = ringinuse;
+    }
 }

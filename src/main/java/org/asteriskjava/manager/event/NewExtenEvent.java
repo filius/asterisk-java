@@ -135,4 +135,5 @@ public class NewExtenEvent extends ManagerEvent
     {
         this.extension = extension;
     }
+
 }

@@ -35,6 +35,22 @@ public class AgentConnectEvent extends AbstractAgentEvent
     private Long holdTime;
     private String bridgedChannel;
     private Long ringtime;
+    private String destchannel;
+    private Integer destchannelstate;
+    private String destcontext;
+    private String destconnectedlinename;
+    private String interfaceName;
+    private String destexten;
+    private String destuniqueid;
+    private String connectedlinenum;
+    private String channelstatedesc;
+    private String destpriority;
+    private String connectedlinename;
+    private String destcalleridname;
+    private String channelstate;
+    private String destconnectedlinenum;
+    private String destchannelstatedesc;
+    private String destcalleridnum;
 
     public AgentConnectEvent(Object source)
     {
@@ -101,5 +117,133 @@ public class AgentConnectEvent extends AbstractAgentEvent
     public void setRingtime(Long ringtime)
     {
         this.ringtime = ringtime;
+    }
+
+    public String getDestchannel() {
+        return destchannel;
+    }
+
+    public void setDestchannel(String destchannel) {
+        this.destchannel = destchannel;
+    }
+
+    public Integer getDestchannelstate() {
+        return destchannelstate;
+    }
+
+    public void setDestchannelstate(Integer destchannelstate) {
+        this.destchannelstate = destchannelstate;
+    }
+
+    public String getDestcontext() {
+        return destcontext;
+    }
+
+    public void setDestcontext(String destcontext) {
+        this.destcontext = destcontext;
+    }
+
+    public String getDestconnectedlinename() {
+        return destconnectedlinename;
+    }
+
+    public void setDestconnectedlinename(String destconnectedlinename) {
+        this.destconnectedlinename = destconnectedlinename;
+    }
+
+    public String getInterfaceName() {
+        return interfaceName;
+    }
+
+    public void setInterfaceName(String interfaceName) {
+        this.interfaceName = interfaceName;
+    }
+
+    public String getDestexten() {
+        return destexten;
+    }
+
+    public void setDestexten(String destexten) {
+        this.destexten = destexten;
+    }
+
+    public String getDestuniqueid() {
+        return destuniqueid;
+    }
+
+    public void setDestuniqueid(String destuniqueid) {
+        this.destuniqueid = destuniqueid;
+    }
+
+    public String getConnectedlinenum() {
+        return connectedlinenum;
+    }
+
+    public void setConnectedlinenum(String connectedlinenum) {
+        this.connectedlinenum = connectedlinenum;
+    }
+
+    public String getChannelstatedesc() {
+        return channelstatedesc;
+    }
+
+    public void setChannelstatedesc(String channelstatedesc) {
+        this.channelstatedesc = channelstatedesc;
+    }
+
+    public String getDestpriority() {
+        return destpriority;
+    }
+
+    public void setDestpriority(String destpriority) {
+        this.destpriority = destpriority;
+    }
+
+    public String getConnectedlinename() {
+        return connectedlinename;
+    }
+
+    public void setConnectedlinename(String connectedlinename) {
+        this.connectedlinename = connectedlinename;
+    }
+
+    public String getDestcalleridname() {
+        return destcalleridname;
+    }
+
+    public void setDestcalleridname(String destcalleridname) {
+        this.destcalleridname = destcalleridname;
+    }
+
+    public String getChannelstate() {
+        return channelstate;
+    }
+
+    public void setChannelstate(String channelstate) {
+        this.channelstate = channelstate;
+    }
+
+    public String getDestconnectedlinenum() {
+        return destconnectedlinenum;
+    }
+
+    public void setDestconnectedlinenum(String destconnectedlinenum) {
+        this.destconnectedlinenum = destconnectedlinenum;
+    }
+
+    public String getDestchannelstatedesc() {
+        return destchannelstatedesc;
+    }
+
+    public void setDestchannelstatedesc(String destchannelstatedesc) {
+        this.destchannelstatedesc = destchannelstatedesc;
+    }
+
+    public String getDestcalleridnum() {
+        return destcalleridnum;
+    }
+
+    public void setDestcalleridnum(String destcalleridnum) {
+        this.destcalleridnum = destcalleridnum;
     }
 }
