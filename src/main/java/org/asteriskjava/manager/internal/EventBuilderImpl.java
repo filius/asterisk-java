@@ -72,7 +72,9 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(BridgeExecEvent.class);
         registerEventClass(BridgeLeaveEvent.class);
         registerEventClass(BlindTransferEvent.class);
+        registerEventClass(AttendedTransferEvent.class);
         registerEventClass(CdrEvent.class);
+        registerEventClass(CelEvent.class);
         registerEventClass(ChallengeSentEvent.class);
         registerEventClass(ChannelReloadEvent.class);
         registerEventClass(ChannelUpdateEvent.class);
@@ -163,6 +165,8 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(PickupEvent.class);
         registerEventClass(PriEventEvent.class);
         registerEventClass(QueueCallerAbandonEvent.class);
+        registerEventClass(QueueCallerJoinEvent.class);
+        registerEventClass(QueueCallerLeaveEvent.class);
         registerEventClass(QueueEntryEvent.class);
         registerEventClass(QueueMemberAddedEvent.class);
         registerEventClass(QueueMemberEvent.class);
@@ -366,7 +370,7 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         if (eventClass == null)
         {
             logger.info("No event class registered for event type '" + eventType + "', attributes: " + attributes
-                    + ". Please report at http://jira.reucon.org/browse/AJ");
+                    + ". Please report at https://github.com/asterisk-java/asterisk-java/issues");
             return null;
         }
 
