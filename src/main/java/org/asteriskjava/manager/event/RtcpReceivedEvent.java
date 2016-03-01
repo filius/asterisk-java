@@ -75,6 +75,7 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
     private String sentoctets;
     private String report0iajitter;
     private String to;
+    private String language;
 
     public RtcpReceivedEvent(Object source)
     {
@@ -419,5 +420,13 @@ public class RtcpReceivedEvent extends AbstractRtcpEvent
     
     public Long getRttAsMillseconds(){
     	return (long) (rtt * 1000);
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
     }
 }

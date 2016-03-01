@@ -52,6 +52,7 @@ public abstract class ManagerEvent extends EventObject
     protected String callerIdNum;
     protected String callerIdName;
     protected String context;
+    private String linkedId;
 
     /**
      * AMI authorization class.
@@ -392,6 +393,14 @@ public abstract class ManagerEvent extends EventObject
     public void setSequenceNumber(Integer sequenceNumber)
     {
         this.sequenceNumber = sequenceNumber;
+    }
+
+    public String getLinkedId() {
+        return linkedId;
+    }
+
+    public void setLinkedId(String linkedId) {
+        this.linkedId = linkedId;
     }
 
     @Override
