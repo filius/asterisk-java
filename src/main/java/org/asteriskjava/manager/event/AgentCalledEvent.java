@@ -38,7 +38,6 @@ public class AgentCalledEvent extends ManagerEvent
     private String channelCalling;
     private String destinationChannel;
     private String uniqueId;
-    private String interfaceName;
     private String exten;
     private String memberName;
 

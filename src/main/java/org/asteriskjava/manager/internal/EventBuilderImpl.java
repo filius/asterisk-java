@@ -128,10 +128,10 @@ class EventBuilderImpl extends AbstractBuilder implements EventBuilder
         registerEventClass(HoldedCallEvent.class);
         registerEventClass(HoldEvent.class);
         registerEventClass(InvalidPasswordEvent.class);
+        registerEventClass(InvalidAccountIdEvent.class);
         registerEventClass(JabberEventEvent.class);
         registerEventClass(JitterBufStatsEvent.class);
         registerEventClass(JoinEvent.class);
-        registerEventClass(InvalidPasswordEvent.class);
         registerEventClass(LeaveEvent.class);
         registerEventClass(LinkEvent.class);
         registerEventClass(ListDialplanEvent.class);
