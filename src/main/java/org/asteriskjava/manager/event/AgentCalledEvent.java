@@ -38,23 +38,25 @@ public class AgentCalledEvent extends ManagerEvent
     private String channelCalling;
     private String destinationChannel;
     private String uniqueId;
-    private String destChannel;
-    private Integer destChannelState;
-    private String destContext;
-    private String destConnectedLineName;
-    private String channel;
     private String interfaceName;
     private String exten;
-    private String destExten;
-    private String destUniqueId;
-    private Integer destPriority;
-    private String destCallerIdName;
-    private String destConnectedLineNum;
-    private String destChannelStateDesc;
-    private String destCallerIdNum;
     private String memberName;
 
     private Map<String, String> variables;
+
+    String destExten;
+    String destChannelStateDesc;
+    String destUniqueId;
+    String destConnectedLineNum;
+    String destConnectedLineName;
+    String destCallerIdName;
+    String destCallerIdNum;
+    String destContext;
+    String destPriority;
+    String destChannel;
+    String destChannelState;
+    String iface;
+    String channel;
 
     /**
      * @param source
@@ -220,11 +222,16 @@ public class AgentCalledEvent extends ManagerEvent
      * <p>
      * Available since Asterisk 13 replace agentName
      * </p>
-     *
      */
-    public String getMemberName() {  return memberName;}
+    public String getMemberName()
+    {
+        return memberName;
+    }
 
-    public void setMemberName(String memberName) { this.memberName = memberName; }
+    public void setMemberName(String memberName)
+    {
+        this.memberName = memberName;
+    }
 
     /**
      * Returns the channel variables if <code>eventwhencalled</code> is set to
@@ -254,121 +261,211 @@ public class AgentCalledEvent extends ManagerEvent
     }
 
     /**
-     * Returns the Caller*ID name of the channel connected if set.
-     * If the channel has no caller id set "unknown" is returned.
-     *
-     * @since 1.0.0
+     * @return the destExten
      */
-
-    /**
-     * Returns the Caller*ID number of the channel connected if set.
-     * If the channel has no caller id set "unknown" is returned.
-     *
-     * @since 1.0.0
-     */
-
-    public String getDestChannel() {
-        return destChannel;
-    }
-
-    public void setDestChannel(String destChannel) {
-        this.destChannel = destChannel;
-    }
-
-    public Integer getDestChannelState() {
-        return destChannelState;
-    }
-
-    public void setDestChannelState(Integer destChannelState) {
-        this.destChannelState = destChannelState;
-    }
-
-    public String getDestContext() {
-        return destContext;
-    }
-
-    public void setDestContext(String destContext) {
-        this.destContext = destContext;
-    }
-
-    public String getDestConnectedLineName() {
-        return destConnectedLineName;
-    }
-
-    public void setDestConnectedLineName(String destConnectedLineName) {
-        this.destConnectedLineName = destConnectedLineName;
-    }
-
-    public String getChannel() {
-        return channel;
-    }
-
-    public void setChannel(String channel) {
-        this.channel = channel;
-    }
-
-    public String getInterfaceName() {
-        return interfaceName;
-    }
-
-    public void setInterfaceName(String interfaceName) {
-        this.interfaceName = interfaceName;
-    }
-
-    public String getDestExten() {
+    public String getDestExten()
+    {
         return destExten;
     }
 
-    public void setDestExten(String destExten) {
+    /**
+     * @param destExten the destExten to set
+     */
+    public void setDestExten(String destExten)
+    {
         this.destExten = destExten;
     }
 
-    public String getDestUniqueId() {
-        return destUniqueId;
-    }
-
-    public void setDestUniqueId(String destUniqueId) {
-        this.destUniqueId = destUniqueId;
-    }
-
-    public Integer getDestPriority() {
-        return destPriority;
-    }
-
-    public void setDestPriority(Integer destPriority) {
-        this.destPriority = destPriority;
-    }
-
-    public String getDestCallerIdName() {
-        return destCallerIdName;
-    }
-
-    public void setDestCallerIdName(String destCallerIdName) {
-        this.destCallerIdName = destCallerIdName;
-    }
-
-    public String getDestConnectedLineNum() {
-        return destConnectedLineNum;
-    }
-
-    public void setDestConnectedLineNum(String destConnectedLineNum) {
-        this.destConnectedLineNum = destConnectedLineNum;
-    }
-
-    public String getDestChannelStateDesc() {
+    /**
+     * @return the destChannelStateDesc
+     */
+    public String getDestChannelStateDesc()
+    {
         return destChannelStateDesc;
     }
 
-    public void setDestChannelStateDesc(String destChannelStateDesc) {
+    /**
+     * @param destChannelStateDesc the destChannelStateDesc to set
+     */
+    public void setDestChannelStateDesc(String destChannelStateDesc)
+    {
         this.destChannelStateDesc = destChannelStateDesc;
     }
 
-    public String getDestCallerIdNum() {
+    /**
+     * @return the destUniqueId
+     */
+    public String getDestUniqueId()
+    {
+        return destUniqueId;
+    }
+
+    /**
+     * @param destUniqueId the destUniqueId to set
+     */
+    public void setDestUniqueId(String destUniqueId)
+    {
+        this.destUniqueId = destUniqueId;
+    }
+
+    /**
+     * @return the destConnectedLineNum
+     */
+    public String getDestConnectedLineNum()
+    {
+        return destConnectedLineNum;
+    }
+
+    /**
+     * @param destConnectedLineNum the destConnectedLineNum to set
+     */
+    public void setDestConnectedLineNum(String destConnectedLineNum)
+    {
+        this.destConnectedLineNum = destConnectedLineNum;
+    }
+
+    /**
+     * @return the destCallerIdName
+     */
+    public String getDestCallerIdName()
+    {
+        return destCallerIdName;
+    }
+
+    /**
+     * @param destCallerIdName the destCallerIdName to set
+     */
+    public void setDestCallerIdName(String destCallerIdName)
+    {
+        this.destCallerIdName = destCallerIdName;
+    }
+
+    /**
+     * @return the destCallerIdNum
+     */
+    public String getDestCallerIdNum()
+    {
         return destCallerIdNum;
     }
 
-    public void setDestCallerIdNum(String destCallerIdNum) {
+    /**
+     * @param destCallerIdNum the destCallerIdNum to set
+     */
+    public void setDestCallerIdNum(String destCallerIdNum)
+    {
         this.destCallerIdNum = destCallerIdNum;
+    }
+
+    /**
+     * @return the destContext
+     */
+    public String getDestContext()
+    {
+        return destContext;
+    }
+
+    /**
+     * @param destContext the destContext to set
+     */
+    public void setDestContext(String destContext)
+    {
+        this.destContext = destContext;
+    }
+
+    /**
+     * @return the destPriority
+     */
+    public String getDestPriority()
+    {
+        return destPriority;
+    }
+
+    /**
+     * @param destPriority the destPriority to set
+     */
+    public void setDestPriority(String destPriority)
+    {
+        this.destPriority = destPriority;
+    }
+
+    /**
+     * @return the destChannel
+     */
+    public String getDestChannel()
+    {
+        return destChannel;
+    }
+
+    /**
+     * @param destChannel the destChannel to set
+     */
+    public void setDestChannel(String destChannel)
+    {
+        this.destChannel = destChannel;
+    }
+
+    /**
+     * @return the destChannelState
+     */
+    public String getDestChannelState()
+    {
+        return destChannelState;
+    }
+
+    /**
+     * @param destChannelState the destChannelState to set
+     */
+    public void setDestChannelState(String destChannelState)
+    {
+        this.destChannelState = destChannelState;
+    }
+
+    /**
+     * @return the iface
+     */
+    public String getInterface()
+    {
+        return iface;
+    }
+
+    /**
+     * @param iface the iface to set
+     */
+    public void setInterface(String iface)
+    {
+        this.iface = iface;
+    }
+
+    /**
+     * @return the channel
+     */
+    public String getChannel()
+    {
+        return channel;
+    }
+
+    /**
+     * @param channel the channel to set
+     */
+    public void setChannel(String channel)
+    {
+        this.channel = channel;
+    }
+
+    /**
+     * @return the destConnectedLineName
+     */
+    public String getDestConnectedLineName()
+    {
+        return destConnectedLineName;
+    }
+
+    /**
+     * @param destConnectedLineName the destConnectedLineName to set
+     */
+    public void setDestConnectedLineName(String destConnectedLineName)
+    {
+        this.destConnectedLineName = destConnectedLineName;
     }
 
 }

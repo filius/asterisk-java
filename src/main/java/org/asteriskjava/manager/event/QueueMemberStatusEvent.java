@@ -29,18 +29,10 @@ public class QueueMemberStatusEvent extends QueueMemberEvent
      */
     private static final long serialVersionUID = -2293926744791895763L;
 
-    private String stateInterface;
-    
-    
-    public String getStateInterface() {
-		return stateInterface;
-	}
+    String ringinuse;
+    String iface;
 
-	public void setStateInterface(String stateInterface) {
-		this.stateInterface = stateInterface;
-	}
-
-	/**
+    /**
      * @param source
      */
     public QueueMemberStatusEvent(Object source)
@@ -48,22 +40,29 @@ public class QueueMemberStatusEvent extends QueueMemberEvent
         super(source);
     }
 
-    private String interfaceName;
-    private Integer ringinuse;
-
-    public String getInterfaceName() {
-        return interfaceName;
+    public String getInterface()
+    {
+        return iface;
     }
 
-    public void setInterfaceName(String interfaceName) {
-        this.interfaceName = interfaceName;
+    public void setInterface(String iface)
+    {
+        this.iface = iface;
     }
 
-    public Integer getRinginuse() {
+    /**
+     * @return the ringinuse
+     */
+    public String getRinginuse()
+    {
         return ringinuse;
     }
 
-    public void setRinginuse(Integer ringinuse) {
+    /**
+     * @param ringinuse the ringinuse to set
+     */
+    public void setRinginuse(String ringinuse)
+    {
         this.ringinuse = ringinuse;
     }
 }
