@@ -36,6 +36,8 @@ public class QueueCallerAbandonEvent extends QueueEvent
     private Integer position;
     private Integer originalPosition;
     private Integer holdTime;
+    private String language;
+
     private String calleridname;
     private String calleridnum;
     private String connectedlinenum;
@@ -98,6 +100,16 @@ public class QueueCallerAbandonEvent extends QueueEvent
     public void setPosition(Integer position)
     {
         this.position = position;
+    }
+
+    public String getLanguage()
+    {
+        return language;
+    }
+
+    public void setLanguage(String language)
+    {
+        this.language = language;
     }
 
     public String getCalleridname() {

@@ -18,6 +18,7 @@ public class QueueCallerLeaveEvent extends QueueEvent {
     private static final long serialVersionUID = 812069706662063871L;
 
     private Integer position;
+    private String language;
 
     public QueueCallerLeaveEvent(Object source) {
         super(source);
@@ -37,4 +38,13 @@ public class QueueCallerLeaveEvent extends QueueEvent {
         this.position = position;
     }
 
+    public String getLanguage()
+    {
+        return language;
+    }
+
+    public void setLanguage(String language)
+    {
+        this.language = language;
+    }
 }
